@@ -1,0 +1,20 @@
+﻿<Window x:Class="ConfInfo.SelectionDialog"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="SelectionDialog" Width="200" Height="200" WindowStartupLocation="CenterScreen"
+        ContentRendered="Window_ContentRendered" ResizeMode="NoResize">
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="30" />
+        </Grid.RowDefinitions>
+
+        <ListBox x:Name="listDisplay"  Grid.Row="0" FontSize="13" MouseDoubleClick="btnDialogOk_Click">
+        </ListBox>
+
+        <WrapPanel Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0, 0, 0,-10">
+            <Button IsDefault="True" Name="btnDialogOk" Click="btnDialogOk_Click" MinWidth="70" Margin="0,0,17,0">Ok</Button>
+            <Button IsCancel="True" MinWidth="70">Cancel</Button>
+        </WrapPanel>
+    </Grid>
+</Window>
